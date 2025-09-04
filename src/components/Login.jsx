@@ -7,12 +7,12 @@ function Login() {
     const[username, setUsername] = useState('')
     const[password, setPassword] = useState('')
 
-    const [user, setUser] = useContext(UserContext)
+  const { user, setUser } = useContext(UserContext)
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(username, password) 
-}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setUser({ username });
+  }
   return (
     <div>
 
